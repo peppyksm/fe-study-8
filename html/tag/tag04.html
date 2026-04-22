@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+    <html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- 
+        a 태그 = 링크/대상으로 이동하는 태그
+        
+        href 속성 : 이동할 경로
+        target 속성 : 어떻게 띄울건지
+            _blank : 새 창
+            _self : 현재 창(타겟 입력 안하면 자동으로 self값)
+        -->
+
+        <a href="https://www.naver.com/">네이버로 이동</a>
+        <a href="https://www.google.com/">구글로 이동</a><br><br>
+
+        <a href="https://www.naver.com/"target="_blank" title="네이버 링크">네이버로 이동</a>
+        <a href="https://www.google.com/"target="_blank" title="구글 링크">구글로 이동</a><br><br>
+        
+        <a href="tag03.html" target=_self>tag03.html로 이동</a><br><br>
+        <a href="../quiz/test01.html" target="_self">test01로 이동</a><br>
+        <!--경로의 ..은 파로 한단계 상위 경로-->
+
+
+        <!--
+            이미지 태그 : img
+            src 속성 : 보여줄 이미지 소스경로
+            alt 속성 : 이미지 설명
+        -->
+        <img src="../tag/img/img001.jpg" alt="선풍기1"><br>
+        <img src="../tag/img/img002.jpg" alt="선풍기2"><br>
+
+        <img src="../../images/img001.jpg" alt="선풍기1"><br>
+        <img src="../../images/img002.jpg" alt="선풍기2">
+
+        <!--외부링크도 가능-->
+        <img src="https://pbs.twimg.com/media/GpZNsaHaMAElRQF.jpg" alt="파루땅">
+        
+        <!--이미지를 통한 링크-->
+        <a href="https://namu.wiki/w/%EC%82%AC%EC%BF%A0%EB%9D%BC%EB%B0%94%20%ED%95%98%EB%A3%A8%EC%B9%B4"target="_blank">
+            <img src="https://i.namu.wiki/i/LkRPmO-BVggQSsowXR2A9pGD1Uko2AjeZtFGd_8BhbHxUn-tU6mUOA2uTCz0WXJUIqcxS2JR1DCbzPkZlf4aaCVlZvvhnw8Pbc-tWcvZlhSl8lmKSVuyNNB0m1Y7u2RFHyzzsYkTiFf7jjmChSVysA.webp" alt="">
+        </a>
+    </body>
+</html>
