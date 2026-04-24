@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+    <html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+            /*/* 구조적 가상 클래스 선택자 */
+            /* p:first-child { color : red; }   div 그룹 내에서 첫번째 p */
+            /* p:last-child { color : blue; }   div 그룹 내에서 마지막 p */
+
+            /* p:nth-child(3) { color : green; }  div 그룹 내에서 3번째 자식이 p일 때 */
+            /* p:nth-of-type(3) { color : orange; }  div 그룹 내에서 3번째 p  */
+
+            /* 짝수 : even(2n) 홀수 : odd(2n+1)*/
+            p:nth-of-type(even) { color : red; }
+        </style>
+    </head>
+    <body>
+        <div>
+        <p>p1</p>
+        <p>p2</p>
+        <p>p3</p>
+        <p>p4</p>
+        <p>p5</p>
+        <p>p6</p>
+        </div>
+
+        <div>
+            <p>p1</p>
+            <span>p2</span>
+            <p>p3</p>
+            <span>p4</span>
+            <p>p5</p>
+            <p>p6</p>
+        </div>
+
+        <div>
+            <p>p1</p>
+            <span>p2</span>
+            <span>p4</span>
+            <p>p3</p>
+            <p>p5</p>
+            <p>p6</p>
+        </div>
+    </body>
+</html>
