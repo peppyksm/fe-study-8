@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+    <html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    <style>
+    table, th, td {
+    border:1px solid black;
+    border-collapse: collapse;
+    }
+    </style>
+    </head>
+    <body>
+        
+        <table>                              <!--table태그로 표 생성-->
+
+            
+            <tr>                             <!--tr태그로 열(가로) td태그로 행(세로)-->
+                <th>지역구분</th>
+                <th colspan="2">지역명</th>  <!--colspan 가로 병합-->
+            </tr>
+            <tr>
+                <td rowspan="2">서울</td>   <!--rowspan 세로 병합-->
+                <td>강남</td>
+                <td>서초</td>
+            </tr>
+            <tr>
+                <td>잠실</td>
+                <td>송파</td>
+            </tr>
+            <tr>
+                <td rowspan="2">천안</td>
+                <td>봉명</td>
+                <td>쌍용</td>
+            </tr>
+            <tr>
+                <td>신부</td>
+                <td>두정</td>
+            </tr>
+        </table><br><br><br>
+
+        <table>
+
+            <thead>                              <!--thead, tbody로 셀 구분, 프론트에는 변화 x-->
+            <tr>
+                <th rowspan="2">식당명</th>       <!--th 태그 사용시 tr보다 굵게 표현돼 강조 가능-->
+                <th colspan="2">영업시간</th>
+                <th rowspan="2">메뉴</th>
+            </tr>
+            <tr>
+                <th>시작시간</th>
+                <th>종료시간</th>
+            </thead>
+
+            <tbody>
+            </tr>
+            <tr>
+                <td rowspan="2">달식당</td>
+                <td rowspan="2">10:00</td>
+                <td rowspan="2">21:00</td>
+                <td>돈까스</td>
+            </tr>
+            <tr>
+                <td>김밥</td>
+            </tr>
+            <tr>
+                <td rowspan="2">맘스터치</td>
+                <td rowspan="2">10:00</td>
+                <td rowspan="2">18:00</td>
+                <td>햄버거</td>
+            </tr>
+            <tr>
+                <td>치킨</td>
+            </tr>
+            <tr>
+                <td rowspan="2">김밥나라</td>
+                <td rowspan="2">10:00</td>
+                <td rowspan="2">20:00</td>
+                <td>떡볶이</td>
+            </tr>
+            <tr>
+                <td>비빔밥</td>
+            </tr>
+            </tbody>
+        </table>
+
+    </body>
+</html>
