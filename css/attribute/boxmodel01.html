@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+    <html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+
+            *{
+                margin:0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            .box1{
+                margin: 30px;  /*margin- top,right,bottom,left로 각 방향별 마진 설정 가능
+                                숫자 두개 입력하면 가로, 세로로 설정 가능*/
+                border:2px solid blue; /*solid는 실선, dotted, dashed 점선, 끊긴선*/
+                padding: 30px;
+            }
+
+            .box2{
+                border: 2px dashed red;
+                /*border-width: 2px;
+                border-style: dashed;
+                border-color: red;  이 세줄의 조합임*/
+                margin: 50px;
+                padding-left: 30px;
+                padding-top: 2rem;
+                /*각 요소의 마진이 겹친다면 더 큰 마진만큼만 벌어짐 
+                ex)30px과 50px의 마진이 겹치면 50px만큼만 벌어짐.*/
+
+                width: 200px;
+                height: 150px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="box1">
+            box1
+        </div>
+
+        <div class="box2">
+            box2
+        </div>
+
+        <p>다른 요소 p태그</p>
+    </body>
+</html>
