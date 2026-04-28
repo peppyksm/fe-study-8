@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+    <html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+            .box{
+                width: 400px;
+                height: 300px;
+                border: 1px solid red;
+            }
+
+            .back {background-color: green;}
+
+            .back-img 
+            {
+                background-image: url(../../images/img001.jpg);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+            .back-img2 
+            {
+                background-image: url(../../images/img002.jpg);
+                /* background-size: contain; */
+                background-repeat: no-repeat; /*반복 x*/
+                background-position: center; /*left right top bottom center*/
+            }
+            /*repeat = 박스가 채워질때까지 반복, round =  이미지가 박스에 맞게 조절
+            auto : 이미지 크기 유지, cover : 이미지 비율 유지하면서 크기조절 해 배경 꽉 채우기
+            contain : 가로or세로가 박스에 딱 맞게 조절
+        </style>
+    </head>
+    <body>
+
+        <div class="box back"></div>
+
+        <div class="box back-img"></div>
+
+        <div class="box back-img2"></div>
+        
+    </body>
+</html>
