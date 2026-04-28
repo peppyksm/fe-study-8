@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+    <html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+
+            *{
+                margin:0;
+                padding: 0;
+                box-sizing: border-box;
+            } /*박스모델에 사이즈 지정시 border까지 사이즈로 인식*/
+
+            .box1{
+
+                width: 200px;
+                height: 100px;
+                border: 1px solid black;
+
+                margin: 10px;
+                padding: 10px;
+
+                /*display : 블록, 인라인, 인라인-블록, none 으로 나뉨*/
+                display: none;
+
+            }
+
+            .box2{
+
+                width: 200px;
+                height: 100px;
+                border: 1px solid black;
+
+                display:block;
+
+                margin: 10px;
+                padding: 10px;
+                
+            }
+
+            .box3{
+
+                width: 200px;
+                height: 100px;
+                border: 1px solid black;
+
+                display: inline;
+
+                margin: 10px;
+                padding: 10px;
+                /*inline으로 설정하면 컨텐츠 크기를 세팅해도 실제 존재하는 컨텐츠 만큼만 박스가 형성됨*/
+                /*inline-block으로 설정하면 컨텐츠 크기는 세팅 가능하나 그 라인에 다른 요소가 붙을 수 있음*/
+                
+            }
+
+            .span1{
+
+                width: 200;
+                height: 100;   /*span은 인라인이라 그냥 컨텐츠크기 지정하면 적용 안됨*/
+                
+                /* display: block;  display block으로 변환 해줘야 커스텀 컨텐츠크기 적용 */
+
+            }
+
+            .parent{
+
+                width: 200px;
+                height: 100px;
+                border: 1px solid blue;
+
+            }
+
+            .child{
+
+                width: 100px;
+                height: 50px;
+                border: 1px solid red;
+
+                display: none;
+
+            }
+
+            .parent:hover .child{
+                display: block;
+            } /*hover = 가상클래스, 마우스를 요소에 올리면 동작
+                        none이었던 .child에 마우스 올리면 block으로 전환됨*/
+
+            .parent:hover .parent-span {
+                color:blue;
+                text-decoration: underline;
+            }/*마우스 올리면 글씨색 blue로 바뀌고 밑줄 생김*/
+
+            /*정리
+            none - 표시 x (특정 상황에서 보이게 바뀌는 상황에 사용)
+            inline - 존재하는 컨텐츠의 크기만 박스 형성, margin 적용 되지만 좌/우로만 형성됨
+            inline-block - 박스 사이즈는 세팅 가능하나 옆에 다른 요소 붙기 가능
+                        (자체적으로는 block, 외부적으로는 inline의 특성)
+            block - 박스 사이즈 세팅 가능하고 옆에 다른 요소 안붙음 */
+
+        </style>
+    </head>
+    <body>
+        <!--div는 기본적으로 블록요소-->
+        <div class="box1">box1</div>
+        <div class="box2">box2</div>
+        <div class="box3">box3</div>
+
+        <span class="span1">span1</span>
+        <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel dolores eligendi natus deserunt neque iusto necessitatibus ullam quod. Nemo, numquam assumenda. Dolorum corporis mollitia maxime quaerat veritatis molestiae aperiam magnam?</span>
+        <!--Lorem 입력시 장문 텍스트 형성(인라인 블럭 요소 작동 구분 시 사용)-->
+
+        <div class="parent">
+            <span class="parent-span">부모</span>
+            <div class="child">
+                자식
+            </div>
+        </div>
+
+
+    </body>
+</html>
