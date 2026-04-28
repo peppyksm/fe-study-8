@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+    <html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+
+            .box {
+                width: 200px;
+                height: 200px;
+            }
+
+            .red-box{
+                background-color: red;
+                position: relative;
+                left: 100px;
+                z-index: 6;
+            }
+
+            .green-box{
+                background-color: green;
+                position: absolute;  /*초록색이 있지만 absolute로 흐름이 무시돼 파란색이 초록자리에 옴*/
+                left: 50px;
+                top: 50px;
+                z-index: 5;  /*x y z축 할 때 z축임*/
+            }
+
+            .blue-box{
+                background-color: blue;
+                position: relative;
+                left: 50px;
+                top: 50px;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        
+        <div class="box red-box"></div>
+        <div class="box green-box"></div>
+        <div class="box blue-box"></div>
+
+    </body>
+</html>
