@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+    *{
+        width: 200px;
+        height: 50px;
+        margin: 0px;
+        padding:0px;
+        box-sizing: border-box;
+        
+    }
+    
+    .container:hover .submenu{
+        display: block;
+    }
+
+    .menu{
+        background-color: rgb(214, 214, 214);
+        text-align: center;
+    }
+
+    .submenu{
+        background-color: rgb(127, 252, 210);
+        position: relative;
+        top:25px;
+        text-align: left;
+        display: none;
+    }
+
+    .submenu:hover{
+        background-color:rgb(252, 170, 140);
+        color: blue;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+
+
+</style>
+<body>
+    
+    <div class="container">
+        <div class="menu">Menu
+            <div class="submenu">submenu item1</div>
+            <div class="submenu">submenu item2</div>
+            <div class="submenu">submenu item3</div>
+        </div>
+
+
+
+    </div>
+</body>
+</html>
