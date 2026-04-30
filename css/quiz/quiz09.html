@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .container{
+            background-color: lightgray;
+            display: flex;
+            flex-direction: column;
+            position:relative;
+        }
+        .container2{
+            display: flex;
+            flex-direction: row;
+        }
+        .box{
+            height: 100px;
+            width: 100px;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            border: 1px solid black;
+            position: relative;
+            /* transition-property: all; */
+            transition-duration: 1s;
+        }
+        .red{
+            background-color: red;
+        }
+        .blue{
+            background-color: blue;
+            
+        }
+        .black{
+            background-color: black;
+            left: 0px;
+        }
+        .green{
+            background-color: green;
+        }
+        .yellow{
+            background-color: yellow;
+        }
+
+        .container:hover .red{
+            width: 400px;
+        }
+
+        .container:hover .blue{
+            background-color: purple;
+        }
+
+        .container:hover .black{
+            left: 200px;
+        }
+
+        .green:hover{
+            border: 10px solid red;
+        }
+
+        .yellow:hover{
+            border: 10px solid red;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box red"></div>
+        <div class="box blue"></div>
+        <div class="box black"></div>
+        <div class="container2">
+            <div class="box green"></div>
+            <div class="box yellow"></div>
+        </div>
+    </div>
+</body>
+</html>
