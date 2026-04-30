@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .main{
+        width: 400px;
+        height: 600px;
+        padding: 28px;
+    }
+    .exitbutton{
+        text-align: right;
+    }
+    #exit{
+        border: none 0px white;
+    }
+    .header{
+        line-height: 1.2;
+        margin: 5px;
+    }
+
+    
+    .loginsign-flex{
+        width: 120px;
+        display: flex;
+        justify-content:space-between;
+        flex-direction:row;
+        color: lightgray;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+    .line{
+        width: 250px;
+        border: 1px solid lightgray;
+    }
+
+    .input input{
+        width: 250px;
+        height: 30px;
+    }
+    #agree{
+        width: 15px;
+        height: 15px;
+    }
+
+    .underbar{
+        text-decoration: underline;
+    }
+    .underbar:hover{
+        cursor: pointer;
+    }
+</style>
+<body>
+    <div class="main">
+
+        <div class="exitbutton">
+            <button id="exit">X</button>
+        </div>
+
+        <div class="header">
+        <H3>지금 가입하시면</H3>
+        <H3><strong>웰컴 쿠폰을 드려요!</strong></H3>
+    </div>
+    <form class="input">
+        <div class="loginsign-flex">
+            <p>로그인</p>
+            <p>회원가입</p>
+        </div>
+
+        <div class="line">
+        </div>
+
+        <div class="email">
+            <p>이메일</p>
+            <input type="email">
+            <p>이름 / 업체명</p>
+            <input type="text" name="name" id="name">
+            <p>비밀번호</p>
+            <input type="password" name="password" id="password">
+            <p>비밀번호 확인</p>
+            <input type="password" name="re-password" id="repassword"><br><br>
+            <input type="checkbox" name="agree" id="agree">
+            <span class="underbar">개인정보수집이용안내 </span><span>및 </span><span class="underbar">약관</span>에 동의합니다.
+        </div>
+
+    </form>
+    </div>
+</body>
+</html>
