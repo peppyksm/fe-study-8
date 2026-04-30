@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* transition : 전환 효과 from->to 효과를 부여할 속성들 지정
+        animation : 여러 단계에 걸쳐 전환 효과 + 반복, 재생, 정지 -> 효과 부여할 속성 지정
+        transform : 자체적으로 전환효과 주는 속성
+        -> transform을 만들어 transition 혹은 animation에 속성으로 부여 가능 */
+
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            margin: 50px;
+
+            /* transform: translate(50px, 150px); 원 위치에서의 x, y좌표 값 */
+            /* transform: scale(1.5, 2.5); 원 사이즈의 배율
+            transform-origin: left top; 변경의 기준점을 변경(기본값은 center)*/
+            /* transform: skew(10deg, 10deg); 기울기, x축 y축에 대한 각도 */
+            transform: rotate(45deg); /*회전*/
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+
+    <div>next 다음에 나타날 요소</div>
+</body>
+</html>
