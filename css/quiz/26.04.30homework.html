@@ -12,16 +12,26 @@
         box-sizing: border-box;
     }
     .main{
-        width: 400px;
-        height: 600px;
-        padding: 28px;
+        width: 310px;
+        height: 550px;
+        padding: 20px;
+        border: 1px solid black;
     }
     .exitbutton{
         text-align: right;
     }
+    
     #exit{
         border: none 0px white;
+        background-color: rgba(0,0,0,0);
+        font-size: 15px;
+        font-weight: 500;
     }
+
+    #exit:hover{
+        cursor: pointer;
+    }
+
     .header{
         line-height: 1.2;
         margin: 5px;
@@ -33,30 +43,120 @@
         display: flex;
         justify-content:space-between;
         flex-direction:row;
-        color: lightgray;
         margin-top: 25px;
         margin-bottom: 25px;
+        color: lightgray;
     }
+
     .line{
         width: 250px;
         border: 1px solid lightgray;
+        position: relative;
+        bottom: 10px;
+    }    
+
+    .loginline{
+        width: 45px;;
+        border: 2px solid rgb(152, 152, 255);
+        position: relative;
+        bottom: 35px;
     }
 
-    .input input{
+    .signupline{
+        width: 60px;
+        border: 2px solid rgb(152, 152, 255);
+        position: relative;
+        left: 61px;
+        bottom: 35px;
+    }
+    
+
+    .loginwindow input{
         width: 250px;
         height: 30px;
+        margin: 2px;
+        border: 1px solid lightgray;
     }
+    .signupwindow input{
+        width: 250px;
+        height: 30px;
+        margin: 2px;
+        border: 1px solid lightgray;
+    }
+
+    
     #agree{
         width: 15px;
         height: 15px;
     }
 
+    .agree-text{
+        font-size: 13px;
+        position: relative;
+        bottom: 2px;
+    }
+
     .underbar{
         text-decoration: underline;
+        color: black;
     }
     .underbar:hover{
         cursor: pointer;
     }
+    .submit{
+        background-color:rgb(136, 136, 255);
+        color: white;
+        margin-top: 20px;
+    }
+    .submit:hover{
+        cursor: pointer;
+    }
+
+    .sns{
+        text-decoration: underline;
+        text-align: center;
+        color: rgb(109, 109, 255);
+    }
+    .sns:hover{
+        cursor: pointer;
+    }
+
+    #signuptap:hover{
+        cursor: pointer;
+    }
+
+    #signuptap:checked ~ .loginwindow{
+        display: none;
+    }
+    
+
+    #logintap:checked ~ .signupwindow{
+        display: none;
+    }
+
+    #logintap:checked ~ .loginsign-flex #login-select{
+    color: rgb(146,146,255);
+    font-weight: bold;
+    }
+    
+    #signuptap:checked ~ .loginsign-flex #signup-select{
+    color: rgb(146,146,255);
+    font-weight: bold;
+    }
+
+    #login-select:hover{
+        cursor: pointer;
+        color: black;
+    }
+
+    #signup-select:hover{
+        cursor: pointer;
+        color: black;
+    }
+
+    
+
+
 </style>
 <body>
     <div class="main">
@@ -69,29 +169,63 @@
         <H3>지금 가입하시면</H3>
         <H3><strong>웰컴 쿠폰을 드려요!</strong></H3>
     </div>
-    <form class="input">
+
+        <input type="radio" name="tab" id="logintap" hidden checked>
+        <input type="radio" name="tab" id="signuptap" hidden  >
+
         <div class="loginsign-flex">
-            <p>로그인</p>
-            <p>회원가입</p>
+            <label for="logintap" id="login-select">로그인</label>
+            <label for="signuptap" id="signup-select">회원가입</label>
+
+            
         </div>
 
         <div class="line">
         </div>
 
-        <div class="email">
-            <p>이메일</p>
-            <input type="email">
-            <p>이름 / 업체명</p>
-            <input type="text" name="name" id="name">
-            <p>비밀번호</p>
-            <input type="password" name="password" id="password">
-            <p>비밀번호 확인</p>
-            <input type="password" name="re-password" id="repassword"><br><br>
-            <input type="checkbox" name="agree" id="agree">
-            <span class="underbar">개인정보수집이용안내 </span><span>및 </span><span class="underbar">약관</span>에 동의합니다.
-        </div>
+        <br>
 
-    </form>
+        <form class="loginwindow">
+
+            <div class="loginline"></div>
+
+            <p>이메일</p>
+            <input type="email" placeholder=" 이메일을 입력해주세요.">
+            <br><br>
+            <p>비밀번호</p>
+            <input type="password" name="password" id="password" placeholder=" 비밀번호를 입력해주세요.">
+            <br><br><br>
+            <input type="submit" class="submit" value="로그인">
+        </form>
+
+
+        <form class="signupwindow">
+
+            <div class="signupline"></div>
+
+            <p>이메일</p>
+            <input type="email" placeholder=" 이메일을 입력해주세요.">
+
+            <p>이름 / 업체명</p>
+            <input type="text" name="name" id="name" placeholder=" 2자 이상 20자 이하">
+
+            <p>비밀번호</p>
+            <input type="password" name="password" id="password" placeholder=" 영문 숫자 특수문자 조합 6-16자리">
+
+            <p>비밀번호 확인</p>
+            <input type="password" name="re-password" id="repassword" placeholder=" 비밀번호를 다시 입력해주세요."><br><br>
+            <input type="checkbox" name="agree" id="agree" required>
+            <span class="agree-text">
+            <a href="https://policy.naver.com/policy-mobile/privacy.html"target="_blank" title="개인정보처리방침"><span class="underbar">개인정보수집이용안내</a><span> 및 </span>
+            <a href="https://policy.naver.com/policy/service.html"target="_blank" title="약관"><span class="underbar">약관</a>에 동의합니다.
+            </span>
+
+
+            <input type="submit" class="submit" value="회원 가입하기">
+            <br><br>
+            <p class="sns">SNS로 간편하게 가입하기</p>
+        </form>
+
     </div>
 </body>
 </html>
