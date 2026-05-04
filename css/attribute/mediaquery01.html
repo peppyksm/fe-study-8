@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box{
+            width: 400px;
+            height: 400px;
+            background-color: antiquewhite;
+        }
+
+        h2{color: red;}
+        p{font-weight: bold;}
+
+        /* 768px 이하인 환경에서 적용할 내용 */
+        @media screen and (max-width:768px) {
+            .box{ background-color: aquamarine;
+                width: 330px;
+            }
+            h2 { color: blue;}
+            p {font-weight: normal;}
+        }
+
+        @media screen and (max-width:480px) {
+            .box{background-color: darkkhaki;}
+            p{font-size: 10px;}
+            h2{}
+            
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box">
+        <h2>h2 tag</h2>
+        <p>p tag</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, sit. Quaerat possimus quas sequi vel inventore nostrum, quam repellendus explicabo recusandae excepturi reiciendis facere nobis voluptate, cum aliquid quisquam quae.</p>
+    </div>
+</body>
+</html>
