@@ -100,6 +100,10 @@
             background-color: green;
         }
 
+        .container div:empty{
+            border: 1px solid black;
+        }
+
 
         @media screen and (max-width:700px) {
             body{
@@ -138,7 +142,7 @@
 
             .raw3_2{
                 width: 100%;
-                flex-direction: column;
+                flex-direction: row;
                 height: 200px
             }
 
@@ -148,12 +152,31 @@
             }
 
             .yellow2, .pink{
-                width: 100%;
+                width: 50%;
             }
         }
 
         @media screen and (max-width:350px) {
-            
+            body{
+                min-width: 350px;
+            }
+
+            .raw3{
+                height: 300px;
+            }
+            .raw3_2{
+                flex-direction: column;
+            }
+            .yellow2, .pink{
+                width: 100%;
+            }
+
+            .raw4{
+                height: 400px;
+            }
+            .yellow3, .orange, .yellow3, .green{
+                width: 100%;
+            }
         }
 
     </style>
