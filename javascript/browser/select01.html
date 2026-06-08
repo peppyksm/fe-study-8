@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+    .bg-red{
+        background-color: red;
+    }
+
+</style>
+<body>
+
+    <div class="container">
+        <p>글자</p>
+    </div>
+
+    <div class="container">
+        <div class="box a" id="box-a-id">A</div>
+        <div class="box b">B</div>
+        <div class="box c">C</div>
+    </div>
+
+    <p id="target">text<span style="display: none;">hidden</span></p>
+
+
+    <script>
+
+        const boxA = document.getElementById("box-a-id");  //id선택(단일)
+        console.log(boxA);
+
+        const boxes = document.getElementsByClassName('box'); //class 선택
+        console.log(boxes);
+        console.log(boxes[0]);
+        console.log(boxes[1]);
+        console.log(boxes[2]);
+
+        const cBoxes = document.getElementsByClassName('c');
+        console.log(cBoxes);
+        console.log(cBoxes[0]);
+
+        //css 선택자 스타일   (css처럼 클래스는 '.'  id는 '#' )
+        //단일 선택 : querySelector
+        //다중 선택 : querySelectorAll
+
+        const boxACss = document.querySelector('#box-a-id'); //단일 선택, id선택
+        console.log(boxACss);
+
+        const boxesCss = document.querySelectorAll(".box"); //다중 선택, class 선택
+        console.log(boxesCss);
+        console.log(boxesCss[0]); //다중선택하면 배열 형태로 됨
+
+        console.log(document.querySelector('.c'));
+        console.log(document.querySelectorAll('.c'));
+        console.log(document.querySelectorAll('.c')[0]);
+
+        //선택 이후 활용
+
+        const p_target = document.querySelector('#target');
+        //const p_target = document.getElementById('target');
+
+        console.log(p_target.textContent); //텍스트 전체(숨겨진것도)
+        console.log(p_target.innerText); //실제 프론트에 표시되는 텍스트만(숨겨진것 제외)
+        console.log(p_target.innerHTML); //HTML 내의 실제 코드
+
+        //p_target.textContent = 'js에서 접근해서 텍스트 수정하기'; //실제 프론트 내용이 바뀜
+        //p_target.innerText = 'js에서 접근해서 텍스트 수정하기';
+
+
+        //p_target.textContent = 'textContent 값 수정 <strong>스트롱</strong> 수정';
+        //실제 텍스트 값만 변경 (태그 써도 텍스트로써 표시됨)
+
+        p_target.innerHTML = 'textContent 값 수정 <strong>스트롱</strong> 수정';
+        //코드 자체가 변경됨(태그 입력 가능)
+
+
+    </script>
+</body>
+
+</html>
