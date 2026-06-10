@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .text-red {
+            color: red;
+        }
+
+        .gray {
+            background-color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="main">
+            <p id="p1">p1 텍스트</p>
+            <p id="p2">p2 텍스트</p>
+        </div>
+    </div>
+    <button onclick="changeMain()">main 배경색 gray로 변경</button>
+    <button onclick="changeP1()">p1 글자색 red로 변경</button>
+    <button onclick="changeP2()">"p2 텍스트"를 "p2 글자" 로 변경</button>
+    <br>
+
+    <h2>추가된 버튼</h2>
+    <button onclick="changeMain2()">main 배경색 white로 다시 변경</button>
+    <button onclick="changeP12()">p1 글자색 black으로 다시 변경</button>
+
+
+    <script>
+
+        const container = document.getElementsByClassName('container')[0];
+        const p1 = document.getElementById('p1');
+        const p2 = document.getElementById('p2');
+        
+
+        function changeMain() {
+            container.classList.toggle("gray");
+        }
+
+        function changeP1() {
+            p1.classList.toggle('text-red');
+        }
+
+
+        let count = 0;
+        const strArr = ["p2 하나", "p2 둘", "p2 셋", "p2 넷", "p2 텍스트"];
+        
+        function changeP2() {
+
+            p2.textContent = strArr[count];
+            count++;
+            if(count == 5){
+                count = 0;
+            }
+        }
+
+        function changeMain2() {
+            container.classList.remove("gray");
+        }
+
+        function changeP12() {
+            p1.classList.remove("text-red");
+        }
+
+    </script>
+</body>
+
+</html>

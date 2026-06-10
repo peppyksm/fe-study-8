@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            margin: 20px;
+
+            position: relative;
+
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-fill-mode: both;
+        }
+
+        .box:hover {
+            animation-play-state: paused;
+        }
+
+        .ani1:hover,
+        .ani2:hover,
+        .ani3:hover {
+            animation-play-state: paused;
+        }
+
+        .ani1 {
+            animation-name: animation1;
+        }
+
+        .ani2 {
+            animation-name: animation2;
+
+        }
+
+        .ani3 {
+            animation-name: animation3;
+        }
+
+        @keyframes animation1 {
+            0% {
+                background-color: blue;
+                left: 0px;
+            }
+
+            50% {
+                background-color: orange;
+                left: 100px;
+            }
+
+            100% {
+                background-color: pink;
+                left: 200px;
+            }
+        }
+
+        @keyframes animation2 {
+            0% {
+                background-color: blue;
+                top: 0px;
+            }
+
+            50% {
+                background-color: orange;
+                top: 100px;
+            }
+
+            100% {
+                background-color: pink;
+                top: 200px;
+            }
+        }
+
+        @keyframes animation3 {
+            0% {
+                background-color: blue;
+                top: 0px;
+                left: 0px;
+            }
+
+            50% {
+                background-color: orange;
+                top: 100px;
+                left: 100px;
+            }
+
+            100% {
+                background-color: pink;
+                top: 200px;
+                left: 200px;
+            }
+        }
+
+        .stop-box {
+            animation-play-state: paused;
+        }
+
+        .pause-box {
+            width: 100px;
+            height: 50px;
+            background-color: lightgray;
+        }
+
+        .pause-box:hover~.box {
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="pause-box">멈추기</div>
+    <button class="start-box">재생</button>
+    <button class="stop-box">정지</button>
+
+    <div class="box ani1"></div>
+    <div class="box ani2"></div>
+    <div class="box ani3"></div>
+
+    <script>
+
+        const box1 = document.getElementsByClassName('box')[0];
+        const box2 = document.getElementsByClassName('box')[1];
+        const box3 = document.getElementsByClassName('box')[2];
+        const start = document.getElementsByClassName('start-box')[0];
+        const stop = document.getElementsByClassName('stop-box')[0];
+
+
+
+        stop.onclick = () => {
+            console.log('stop');
+            box1.classList.add('stop-box');
+            box2.classList.add('stop-box');
+            box3.classList.add('stop-box');
+        }
+
+        start.onclick = () => {
+            console.log('start');
+            box1.classList.remove('stop-box');
+            box2.classList.remove('stop-box');
+            box3.classList.remove('stop-box');
+        }
+
+    </script>
+
+
+</body>
+
+</html>
