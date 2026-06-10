@@ -1,0 +1,49 @@
+<form id="formId">
+    <input type="text" id="loginId" placeholder="아이디"><br>
+    <input type="password" id="loginPw" placeholder="비밀번호"><br>
+    <button type="submit" id="btnLogin">로그인 시도</button><br>
+</form>
+
+<script>
+    const loginId = document.getElementById('loginId');
+    const loginPw = document.getElementById('loginPw');
+    const btnLogin = document.getElementById('btnLogin');
+    const formId = document.getElementById('formId');
+
+
+    loginId.addEventListener('keydown', (event) => {
+        console.log(event);
+        if (event.key == 'Enter') {
+            event.preventDefault();
+            loginPw.focus();
+        }
+    });
+
+    loginPw.addEventListener('keydown', (event) => {
+        if (event.key == 'Enter') {
+            event.preventDefault();
+            formId.requestSubmit();
+        }
+    });
+
+    formId.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        loginId.value = loginId.value.trim();
+        loginPw.value = loginPw.value.trim();
+
+        if (loginId.value == '') {
+            alert("아이디를 입력해주세요.");
+            loginId.focus();
+            return;
+        } else if (loginPw.value == '') {
+            alert("비밀번호를 입력해주세요.");
+            loginPw.focus();
+            return;
+        }
+
+        formId.submit();
+
+
+    });
+</script>
